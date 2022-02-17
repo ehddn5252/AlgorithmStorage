@@ -33,7 +33,7 @@ public class OptimalPath {
                 VIPs[i] = new int[]{Integer.parseInt(s[4 + j]), Integer.parseInt(s[4 + j + 1])};
                 j+=2;
             }
-            permutation(0, startLocation[0],startLocation[1],0);
+            permutationBacktracking(0, startLocation[0],startLocation[1],0);
             System.out.print("#"+testCaseIndex+" ");
             System.out.println(minDistance);
             minDistance = 99999;
@@ -44,7 +44,7 @@ public class OptimalPath {
     // 회사에서 시작해서 고객들을 다 만나고 우리집으로 돌아간다.
     // 고객의 수 n은 2 ~ 10 명이다.
     // 순열로 모든 경우의수 돌려보면 된다.
-    static void permutation(int cnt, int currentLocationX,int currentLocationY,int currentDistance){
+    static void permutationBacktracking(int cnt, int currentLocationX, int currentLocationY, int currentDistance){
         if(currentDistance>=minDistance)return;
         if (cnt==VIPs.length){
             currentDistance += Math.abs(currentLocationX-endLocation[0]) +  Math.abs(currentLocationY -endLocation[1]);
@@ -58,7 +58,7 @@ public class OptimalPath {
             if(isVisited[i])continue;
             int d = Math.abs(currentLocationX-VIPs[i][0]) +  Math.abs(currentLocationY -VIPs[i][1]);
             isVisited[i] = true;
-            permutation(cnt+1,VIPs[i][0],VIPs[i][1],d+currentDistance);
+            permutationBacktracking(cnt+1,VIPs[i][0],VIPs[i][1],d+currentDistance);
             isVisited[i] = false;
         }
     }

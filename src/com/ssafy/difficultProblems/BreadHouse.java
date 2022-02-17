@@ -1,6 +1,6 @@
 package com.ssafy.difficultProblems;
 
-
+// 날짜: 2022.02.17
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -71,7 +71,7 @@ public class BreadHouse {
             }
 
             // 우
-            if ((0 <= row) && (row <= rowNum - 1)){
+            if (row <= rowNum - 1){
                 if(map[row][col+1]=='.'){
                     map[row][col+1]='x';
                     mainLogic(  row, col + 1);
