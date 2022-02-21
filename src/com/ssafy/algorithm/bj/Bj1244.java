@@ -10,7 +10,6 @@ public class Bj1244 {
     static int[][] studentInfo;
 
     public static void main(String[] args) throws IOException {
-
         // input
         int switchNum = Integer.parseInt(br.readLine());
         switches = new int[switchNum];
