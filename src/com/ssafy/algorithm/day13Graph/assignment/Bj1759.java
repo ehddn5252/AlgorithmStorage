@@ -1,3 +1,4 @@
+// 암호 만들기
 package com.ssafy.algorithm.day13Graph.assignment;
 
 import java.io.BufferedReader;

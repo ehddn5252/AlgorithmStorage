@@ -58,7 +58,6 @@ public class BreadHouse {
                 if (visit[movedRow][movedCol]) {
                     continue;
                 }
-
                 visit[movedRow][movedCol] = true;
                 if (map[movedRow][movedCol] == '.') {
                     map[movedRow][movedCol] = 'x';
