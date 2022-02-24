@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
-
-public class babyShark {
+// 16236 아기상어
+public class BabyShark {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int N;
     static int[][] map;

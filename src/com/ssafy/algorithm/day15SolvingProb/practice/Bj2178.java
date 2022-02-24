@@ -49,7 +49,7 @@ public class Bj2178 {
                     if(visit[nextI][nextJ]) continue;
                     if(map[nextI][nextJ]==1){
                         // 여기에 visit 을 true 로 해두지 않으면 메모리 초과가 난다.
-                        // 왜냐하면 여기서 for문이 또 4번 도는데, 그것 들어간 것에는 visit = true가 적용되지 않기 때문.
+                        // 왜냐하면 여기서 for 문이 또 4번 도는데, 그것 들어간 것에는 visit = true가 적용되지 않기 때문.
                         visit[nextI][nextJ]=true;
                         q.offer(new int[]{nextI,nextJ,popped[2]+1});
                     }

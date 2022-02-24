@@ -1,6 +1,6 @@
 package com.ssafy.algorithm.day15SolvingProb.assignment;
 
-// Bj 10026/ 적록색약
+// Bj 10026 적록색약
 
 import java.io.BufferedReader;
 import java.io.IOException;
