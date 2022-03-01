@@ -1,4 +1,4 @@
-package com.ssafy.algorithm.day16Dijkstra.practice;
+package com.ssafy.algorithm.day16DijkstraKmp.practice;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,6 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-/**
- * @author kimtaehee
- */
 public class DijkstraTest1 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -19,13 +16,16 @@ public class DijkstraTest1 {
 		int start = 0;
 		
 		StringTokenizer st = null;
+		
+		//인접 행렬 작성 -> 최소 비용 인접 메트릭스
 		for (int i = 0; i < V; i++) {
 			st = new StringTokenizer(in.readLine()," ");
 			for (int j = 0; j < V; j++) {
 				adjMatrix[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-		
+
+		//
 		int[] distance = new int[V]; // 출발지에서 자신으로 오는 최소비용
 		boolean[] visited = new boolean[V]; // 최소비용 확정여부
 		
@@ -43,7 +43,6 @@ public class DijkstraTest1 {
 			}
 			
 			visited[current] = true;
-			
 			// 단계2 :  선택된 정점을 경유지로 하여 아직 최소비용이 확정되지 않은 다른정점의 최소비용을 고려
 			for (int j = 0; j < V; j++) {
 				if (!visited[j] && adjMatrix[current][j] != 0 && 
@@ -52,7 +51,6 @@ public class DijkstraTest1 {
 				}
 			}
 		}
-		
-		System.out.println(Arrays.toString(distance)); 
+		System.out.println(Arrays.toString(distance));
 	}
 }

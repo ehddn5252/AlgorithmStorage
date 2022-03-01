@@ -1,10 +1,14 @@
-package com.ssafy.algorithm.bj;
+package com.ssafy.algorithm.test;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
 
 
-class Main {
+class Test {
     static ArrayList<Edge>[] adj;
     static boolean[] check;
     static int[] dist;
@@ -62,20 +66,21 @@ class Main {
             }
         }
     }
+    static private class Edge implements Comparable<com.ssafy.algorithm.test.Edge> {
+        int destination;
+        int weight;
+
+        public Edge(int destination, int weight) {
+            this.destination = destination;
+            this.weight = weight;
+        }
+
+        @Override
+        public int compareTo(com.ssafy.algorithm.test.Edge o) {
+            // TODO Auto-generated method stub
+            return Integer.compare(this.weight, o.weight);
+        }
+    }
 }
 
-class Edge implements Comparable<Edge> {
-    int destination;
-    int weight;
 
-    public Edge(int destination, int weight) {
-        this.destination = destination;
-        this.weight = weight;
-    }
-
-    @Override
-    public int compareTo(Edge o) {
-        // TODO Auto-generated method stub
-        return Integer.compare(this.weight, o.weight);
-    }
-}

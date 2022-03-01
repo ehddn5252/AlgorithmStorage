@@ -1,5 +1,8 @@
 package com.ssafy.algorithm.day14Graph2.practice;
 
+// 최소 신장 트리가 되는 이유는 서로소 집합이 만들어져서이다. union 을 시키면 finsSet 함수를 실행하게 되는데, 
+// 이는 같은 대표를 가지고 있는 지 확인하는 것이고 이것이 같은 대표를 가지고 있다면 pass 같은 대표를 가지고 있지 않다면 연결하는 형식을 사용한 것.
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

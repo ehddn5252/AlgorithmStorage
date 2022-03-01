@@ -1,4 +1,4 @@
-package com.ssafy.algorithm.day16Dijkstra.practice;
+package com.ssafy.algorithm.day16DijkstraKmp.practice;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -20,9 +20,14 @@ public class String_KMPTest {
 		// 부분일치테이블 만들기 : KMP의 아이디어를 똑같이 적용, W에서 W를 찾는 듯한 행위를 해서...
 		int[] pi = new int[pLength];
 	    for(int i=1, j=0; i<pLength; i++){// i:접미사 포인터(i=1부터 시작: 우리는 부분일치테이블를 만드는게 목적이므로 첫글자 틀리면 0위치로 가야하므로.), j:접두사 포인터
-	        while(j > 0 && pattern[i] != pattern[j]) j = pi[j-1]; 
-	        
-	        if(pattern[i] == pattern[j]) pi[i] = ++j;
+	        // j 값이 0보다 크다는 것은 일치하는 것이 하나 이상이라는 뜻 그리고 i와 j 번째가 일치하지 않으면 이전 pi의 이전 j를 j에 저장한다.
+
+			while(j > 0 && pattern[i] != pattern[j]) j = pi[j-1];
+
+			// 패턴 i와 패턴 j가 같다면 pi[i]
+	        if(pattern[i] == pattern[j]){
+				pi[i] = ++j;
+			}
 	        else pi[i] = 0;
 	    }
 		
