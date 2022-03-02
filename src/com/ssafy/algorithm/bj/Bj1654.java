@@ -1,5 +1,5 @@
 package com.ssafy.algorithm.bj;
-
+// 랜선 자르기
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
