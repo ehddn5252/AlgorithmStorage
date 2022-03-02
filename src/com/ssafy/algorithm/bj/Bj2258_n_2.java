@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Bj2258_n_2 {
+public class Bj2258 {
     // 일정 가격 미만의 고기들은 덤으로 얻을 수 있다.
     // 원하는 양의 고기를 구매하기 위해 필요한 최소 비용을 구하시오
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
