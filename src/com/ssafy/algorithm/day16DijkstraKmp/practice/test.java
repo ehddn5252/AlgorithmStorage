@@ -1,4 +1,4 @@
-package com.ssafy.algorithm.day16Dijkstra.practice;
+package com.ssafy.algorithm.day16DijkstraKmp.practice;
 
 
 import java.io.BufferedReader;
