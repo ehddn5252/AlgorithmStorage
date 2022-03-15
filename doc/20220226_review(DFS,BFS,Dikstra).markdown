@@ -78,7 +78,7 @@ def powerSet(int cnt){
 ```Java
 
 for(Edge next: adj[current]){
-    if(visit[next.destination]) continnue;
+    if(visit[next.destination]) continue;
     visit[next.destination] = true;
     if(distance[next.destination] > distance[e.destination] + next.weight ){
         distance[next.destination] = distance[e.destination] + next.weight;

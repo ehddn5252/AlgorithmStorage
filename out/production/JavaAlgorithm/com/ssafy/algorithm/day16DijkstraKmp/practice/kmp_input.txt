@@ -1,0 +1,19 @@
+ababababcababaca
+ababaca
+ 
+==>
+1
+[9]
+
+aaaaaab
+aaa
+
+==>
+4
+[0, 1, 2, 3]
+
+ababababcababaca
+abacabab
+
+==>
+0
