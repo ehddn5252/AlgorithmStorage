@@ -70,7 +70,6 @@ class prob2
             map= new int[N][N];
             monsterNum=0;
 
-
             for(int i=0;i<N;++i) {
                 String[] s = br.readLine().split(" ");
                 for(int j=0;j<N;++j) {
@@ -80,7 +79,6 @@ class prob2
                     }
                     if(map[i][j]!=0) {
                         clientMonsterPositionList.add(new int[]{i,j,map[i][j]});
-
                     }
                 }
             }
@@ -100,11 +98,10 @@ class prob2
             // 표준출력(화면)으로 답안을 출력합니다.
             System.out.println("#" + test_case+" "+ answer);
         }
-
     }
+
     static void mainLogic(){
         permu(0);
-
     }
 
     static void permu(int cnt) {
