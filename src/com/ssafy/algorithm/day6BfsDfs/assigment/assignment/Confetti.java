@@ -19,7 +19,6 @@ public class Confetti {
         for (int confettiIndex = 1; confettiIndex < confettiNum + 1; ++confettiIndex) {
             int[] inputI = str2intArray(br.readLine());
             attach(inputI[0], inputI[1]);
-
         }
         bw.write(String.format("%d",calcu()));
         bw.flush();
