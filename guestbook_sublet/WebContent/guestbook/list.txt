@@ -1,0 +1,54 @@
+out.println("<!DOCTYPE html>");
+out.println("<html>");
+out.println("<head>");
+out.println("    <meta charset=\"UTF-8\">");
+out.println("    <title>SSAFY - 글목록</title>");
+out.println("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+out.println("    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">");
+out.println("    <style>");
+out.println("        mark.sky {");
+out.println("            background: linear-gradient(to top, #54fff9 20%, transparent 30%);");
+out.println("        }");
+out.println("    </style>");
+out.println("    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>");
+out.println("    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js\"></script>");
+out.println("    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>");
+out.println("    <script type=\"text/javascript\">");
+out.println("        $(document).ready(function () {");
+out.println("            $(\"#mvRegisterBtn\").click(function () {");
+out.println("                location.href = \"/context-root/guestbook/write.html\";");
+out.println("            });");
+out.println("        });");
+out.println("    </script>");
+out.println("</head>");
+out.println("<body>");
+out.println("    <div class=\"container text-center mt-3\">");
+out.println("        <div class=\"col-lg-8 mx-auto\">");
+out.println("            <h2 class=\"p-3 mb-3 shadow bg-light\">글목록</h2>");
+out.println("            <div class=\"m-3 text-right\">");
+out.println("                <button type=\"button\" id=\"mvRegisterBtn\" class=\"btn btn-link\"><mark class=\"sky\">글작성</mark></button>");
+out.println("            </div>");
+
+
+out.println("            <table class=\"table table-active text-left\">");
+out.println("                <tbody>");
+out.println("                    <tr class=\"table-info\">");
+out.println("                        <td>작성자 : ssafy</td>");
+out.println("                        <td class=\"text-right\">작성일 : 2025-04-13 13:25:39</td>");
+out.println("                    </tr>");
+out.println("                    <tr>");
+out.println("                        <td colspan=\"2\" class=\"table-danger\">");
+out.println("                            <strong>10. 안녕하세요!!!</strong>");
+out.println("                        </td>");
+out.println("                    </tr>");
+out.println("                    <tr>");
+out.println("                        <td class=\"p-4\" colspan=\"2\">즐거운 하루 되세요!!</td>");
+out.println("                    </tr>");
+out.println("                </tbody>");
+out.println("            </table>");
+
+
+out.println("        </div>");
+out.println("    </div>");
+out.println("</body>");
+out.println("</html>");
