@@ -26,26 +26,26 @@ public class Main {
             dish[N+i]= dish[i];
         }
         kindL[c]=1;
-        int kindV = 1;
+        int currentKindNum = 1;
         int ans=1;
         for(int i=0;i<N+k;++i){
             if(i<k){
                 kindL[dish[i]]+=1;
                 if(kindL[dish[i]]==1){
-                    kindV++;
+                    currentKindNum++;
                 }
             }
             else{
                 kindL[dish[i-k]]-=1;
                 if(kindL[dish[i-k]]==0){
-                    kindV--;
+                    currentKindNum--;
                 }
                 kindL[dish[i]]+=1;
                 if(kindL[dish[i]]==1){
-                    kindV++;
+                    currentKindNum++;
                 }
             }
-            if(ans<kindV) ans=kindV;
+            if(ans< currentKindNum) ans= currentKindNum;
         }
         System.out.println(ans);
     }
