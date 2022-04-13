@@ -38,6 +38,7 @@ public class Bj17471_Gerrymandering {
     private static void powerSet(int cnt,int populationSum,int visitCount) {
         if(cnt==population.length){
             if(visitCount==0 || visitCount==population.length)return;
+
             if(checkConnect(visitCount)){
                 int diff = Math.abs(sum-populationSum-populationSum);
                 if(diff<ans){

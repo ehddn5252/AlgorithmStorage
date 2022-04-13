@@ -9,7 +9,7 @@ import java.util.Queue;
 public class Bj2239_sudoku {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static int[][] map = new int[9][9], newMap = new int[9][9];
+    static int[][] map = new int[9][9];
     static boolean retFlag = false;
 
     public static void main(String[] args) throws IOException {
@@ -36,7 +36,8 @@ public class Bj2239_sudoku {
 
     1. 1부터 9까지의 숫자를 적어놓고 만약 0이 있는 경우에 q에 넣는다.
     2. q를 빼고 1~9까지 다 넣어보는 DFS 한다.
-     */
+    */
+
     private static Queue<Pos> qClone(Queue<Pos> q) {
         Queue<Pos> newQ = new LinkedList<Pos>();
         for (Pos p : q) newQ.add(p);
@@ -85,8 +86,8 @@ public class Bj2239_sudoku {
 
     private static boolean sectionCheck(int nowI, int nowJ) {
         boolean ret = true;
-        int addSectionI = (int) 1.0 * nowI / 3 * 3;
-        int addSectionJ = (int) 1.0 * nowJ / 3 * 3;
+        int addSectionI = nowI / 3 * 3;
+        int addSectionJ = nowJ / 3 * 3;
 
         int[] arrays = new int[10];
         for (int i = 0 + addSectionI; i < addSectionI + 3; ++i)
@@ -96,7 +97,6 @@ public class Bj2239_sudoku {
         for (int i = 1; i < 10; ++i) if (arrays[i] > 1) return false;
         return ret;
     }
-
 
     static class Pos {
         int i;
