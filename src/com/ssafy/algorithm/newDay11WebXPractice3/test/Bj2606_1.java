@@ -8,6 +8,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.logging.Logger;
 
+/*
+20000
+4
+1 2
+1 5
+4 5
+6 7
+
+ */
 // linkedList 버전
 public class Bj2606_1 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

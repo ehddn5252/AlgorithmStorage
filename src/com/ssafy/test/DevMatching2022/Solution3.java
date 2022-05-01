@@ -54,7 +54,6 @@ class Solution3 {
             t = new tmp(move16(grid),popped.ans+1);
             q.offer(t);
         }
-
     }
 
     static class tmp{
